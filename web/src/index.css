@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}
+
+/* Code diff styling improvements for light and dark themes */
+.code-diff-view {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-size: 13px !important;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 100%;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.code-diff-view[theme="dark"] {
+  background-color: #0d1117 !important;
+  color: #e6edf3 !important;
+  border-color: #30363d !important;
+}
+
+.code-diff-view[theme="light"] {
+  background-color: #ffffff !important;
+  color: #1f2328 !important;
+  border-color: #d0d7de !important;
+}
+
+/* Header and command bar adjustments */
+.code-diff-view[theme="dark"] .file-header {
+  background-color: #161b22 !important;
+  border-bottom-color: #30363d !important;
+  color: #e6edf3 !important;
+}
+
+.code-diff-view[theme="light"] .file-header {
+  background-color: #f6f8fa !important;
+  border-bottom-color: #d0d7de !important;
+  color: #1f2328 !important;
+}

@@ -1,0 +1,11 @@
+packages:
+  - 'server'
+  - 'web'
+
+allowBuilds:
+  better-sqlite3: true
+  cpu-features: true
+  esbuild: true
+  ssh2: true
+  v-code-diff: true
+  vue-demi: true
